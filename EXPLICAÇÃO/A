@@ -1,0 +1,94 @@
+Vídeo: Sistemas Embarcados - Principais tipos de sensores e aplicações
+🧠 O que é “sistema embarcado”?
+
+Imagina um robôzinho dentro das coisas 🤖
+
+Dentro do carro 🚗
+Dentro da geladeira 🧊
+Dentro do celular 📱
+
+👉 Esse “cérebro escondido” é o que chamam de sistema embarcado
+
+Ele serve pra:
+
+ver o que está acontecendo
+pensar um pouquinho
+tomar decisões simples
+👀 O que são sensores?
+
+Sensores são tipo os sentidos do corpo 👇
+
+Corpo humano	Sensor
+Olho 👁️	vê luz
+Ouvido 👂	escuta som
+Pele ✋	sente calor/frio
+Nariz 👃	sente cheiro
+
+👉 Sensor é isso:
+uma coisinha que percebe o mundo
+
+🔍 Tipos de sensores (bem simples)
+🌡️ Sensor de temperatura
+
+👉 É tipo sentir se está quente ou frio
+
+Exemplo:
+
+Ar-condicionado sabe quando esfriar ❄️
+Chuveiro controla a água 🚿
+💡 Sensor de luz
+
+👉 Sabe se está claro ou escuro
+
+Exemplo:
+
+Luz da rua acende sozinha à noite 🌙
+📏 Sensor de distância
+
+👉 Sabe se algo está perto ou longe
+
+Exemplo:
+
+Carro apita quando você vai bater 🚗 “PI PI PI”
+🏃 Sensor de movimento
+
+👉 Sabe se algo se mexeu
+
+Exemplo:
+
+Luz que acende quando alguém entra 🚶
+⚖️ Sensor de pressão/força
+
+👉 Sente quando algo é apertado
+
+Exemplo:
+
+Tela do celular quando você toca 📱
+🧩 Como tudo funciona junto?
+
+Imagina assim:
+
+O sensor vê algo 👀
+O sistema embarcado pensa 🤔
+A máquina faz algo ⚙️
+
+👉 Exemplo:
+
+Sensor: “Está escuro!” 🌑
+Sistema: “Hmm…”
+Ação: “Acender luz!” 💡
+🤖 Exemplo real (tipo história)
+
+Você chega perto de uma porta automática:
+
+Sensor vê você 🚶
+Sistema pensa 🤔
+Porta abre 🚪
+
+✨ Mágica? Não!
+👉 Sensores + sistema embarcado
+
+🧸 Resumo bem simples:
+Sensores = sentidos das máquinas
+Sistema embarcado = cérebro pequeno dentro delas
+Juntos eles fazem coisas automáticas acontecerem
