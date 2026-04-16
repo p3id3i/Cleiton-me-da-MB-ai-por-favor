@@ -1,0 +1,31 @@
+🏃 Projeto 4 — Sensor de movimento (alarme simples)
+💡 Ideia
+
+Detecta movimento e liga um alerta.
+
+🧰 Componentes
+Sensor HC-SR501 PIR Sensor
+LED
+Arduino
+
+int pir = 7;
+int led = 13;
+
+void setup() {
+  pinMode(pir, INPUT);
+  pinMode(led, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  int movimento = digitalRead(pir);
+
+  if (movimento == HIGH) {
+    digitalWrite(led, HIGH);
+    Serial.println("Movimento detectado!");
+  } else {
+    digitalWrite(led, LOW);
+  }
+
+  delay(100);
+}

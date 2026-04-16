@@ -1,0 +1,40 @@
+Controle de temperatura (ventoinha automática)
+💡 Ideia
+
+Liga um “cooler” (LED simulando) quando esquenta.
+
+🧰 Componentes
+Sensor TMP36
+LED
+Arduino
+🧠 Lógica
+Mede temperatura
+Se passar de 30°C → liga
+
+codigo:
+
+int sensorTemp = A0;
+int led = 9;
+
+void setup() {
+  pinMode(led, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  int leitura = analogRead(sensorTemp);
+
+  float tensao = leitura * 5.0 / 1023.0;
+  float temperatura = (tensao - 0.5) * 100;
+
+  Serial.print("Temp: ");
+  Serial.println(temperatura);
+
+  if (temperatura > 30) {
+    digitalWrite(led, HIGH);
+  } else {
+    digitalWrite(led, LOW);
+  }
+
+  delay(500);
+}

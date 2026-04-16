@@ -1,0 +1,43 @@
+🔧 Projeto 1 — Luz automática (Sensor de luz)
+💡 Ideia
+
+A luz acende sozinha quando escurece.
+
+🧰 Componentes
+1x LDR
+1x resistor (10kΩ)
+1x LED
+1x resistor (220Ω)
+Arduino Uno
+🧠 Lógica
+Lê o valor da luz
+Se estiver escuro → liga LED
+Se estiver claro → desliga
+🔌 Ligações (resumo)
+LDR + resistor → A0
+LED → pino 13
+
+codigo:
+
+int sensorLuz = A0;
+int led = 13;
+int valorLuz = 0;
+
+void setup() {
+  pinMode(led, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  valorLuz = analogRead(sensorLuz);
+
+  Serial.println(valorLuz);
+
+  if (valorLuz < 500) { // escuro
+    digitalWrite(led, HIGH);
+  } else {
+    digitalWrite(led, LOW);
+  }
+
+  delay(200);
+}

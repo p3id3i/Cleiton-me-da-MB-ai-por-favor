@@ -1,0 +1,53 @@
+Projeto 3 — Sensor de distância (alerta de colisão)
+💡 Ideia
+
+Um buzzer apita quando algo chega perto.
+
+🧰 Componentes
+Sensor HC-SR04
+Buzzer
+Arduino
+🧠 Lógica
+Mede distância
+Se < 20 cm → alerta
+🔌 Pinos
+TRIG → 9
+ECHO → 10
+BUZZER → 8
+
+int trig = 9;
+int echo = 10;
+int buzzer = 8;
+
+void setup() {
+  pinMode(trig, OUTPUT);
+  pinMode(echo, INPUT);
+  pinMode(buzzer, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  long duracao;
+  int distancia;
+
+  digitalWrite(trig, LOW);
+  delayMicroseconds(2);
+
+  digitalWrite(trig, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trig, LOW);
+
+  duracao = pulseIn(echo, HIGH);
+  distancia = duracao * 0.034 / 2;
+
+  Serial.print("Distancia: ");
+  Serial.println(distancia);
+
+  if (distancia < 20) {
+    tone(buzzer, 1000);
+  } else {
+    noTone(buzzer);
+  }
+
+  delay(200);
+}
