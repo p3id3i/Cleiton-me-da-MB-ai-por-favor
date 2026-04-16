@@ -1,0 +1,103 @@
+Projeto 1 — Sistema Inteligente de Ambiente
+💡 Ideia
+
+Um sistema que:
+
+🌡️ mede temperatura
+💡 mede luz
+🏃 detecta movimento
+
+E toma decisões:
+
+Liga “ventoinha” (LED) se estiver quente
+Liga luz se estiver escuro e tiver movimento
+🧰 Componentes
+Arduino Uno
+Sensor de temperatura (TMP36)
+LDR
+Sensor PIR
+2 LEDs
+🧠 Lógica profissional
+
+Sem travar o sistema:
+
+Nada de delay()
+Tudo baseado em tempo com millis()
+Leituras periódicas independentes
+
+CODIGOS:
+
+// ======= PINOS =======
+#define TEMP_PIN A0
+#define LDR_PIN  A1
+#define PIR_PIN  2
+
+#define LED_TEMP 9
+#define LED_LUZ  10
+
+// ======= TEMPO =======
+unsigned long tempoAnterior = 0;
+const long intervalo = 200; // 200ms
+
+// ======= VARIÁVEIS =======
+float temperatura = 0;
+int luz = 0;
+int movimento = 0;
+
+void setup() {
+  Serial.begin(9600);
+
+  pinMode(PIR_PIN, INPUT);
+  pinMode(LED_TEMP, OUTPUT);
+  pinMode(LED_LUZ, OUTPUT);
+}
+
+// ======= FUNÇÕES =======
+float lerTemperatura() {
+  int leitura = analogRead(TEMP_PIN);
+  float tensao = leitura * 5.0 / 1023.0;
+  return (tensao - 0.5) * 100;
+}
+
+int lerLuz() {
+  return analogRead(LDR_PIN);
+}
+
+int lerMovimento() {
+  return digitalRead(PIR_PIN);
+}
+
+// ======= LOOP PRINCIPAL =======
+void loop() {
+  unsigned long agora = millis();
+
+  if (agora - tempoAnterior >= intervalo) {
+    tempoAnterior = agora;
+
+    // ===== LEITURAS =====
+    temperatura = lerTemperatura();
+    luz = lerLuz();
+    movimento = lerMovimento();
+
+    // ===== DEBUG =====
+    Serial.print("Temp: "); Serial.print(temperatura);
+    Serial.print(" | Luz: "); Serial.print(luz);
+    Serial.print(" | Mov: "); Serial.println(movimento);
+
+    // ===== REGRAS =====
+
+    // Temperatura
+    if (temperatura > 30) {
+      digitalWrite(LED_TEMP, HIGH);
+    } else {
+      digitalWrite(LED_TEMP, LOW);
+    }
+
+    // Luz + movimento (lógica combinada)
+    if (luz < 400 && movimento == HIGH) {
+      digitalWrite(LED_LUZ, HIGH);
+    } else {
+      digitalWrite(LED_LUZ, LOW);
+    }
+  }
+}

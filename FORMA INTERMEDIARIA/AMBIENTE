@@ -1,0 +1,87 @@
+Projeto 2 — Assistente de Estacionamento Inteligente
+💡 Ideia
+
+Sistema com:
+
+📏 distância (ultrassônico)
+💡 luz ambiente
+
+👉 Comportamento:
+
+Quanto mais perto → mais rápido o beep
+Só funciona no escuro (tipo sensor real de carro)
+🧰 Componentes
+HC-SR04
+LDR
+Buzzer
+Arduino Uno
+🧠 Lógica profissional
+Controle de tempo com millis()
+Frequência do buzzer variável
+Sistema reativo (não travado)
+
+CODIGO:
+
+#define TRIG 9
+#define ECHO 10
+#define BUZZER 8
+#define LDR A0
+
+unsigned long tempoAnterior = 0;
+unsigned long intervaloBuzzer = 500;
+
+int distancia = 0;
+int luz = 0;
+
+void setup() {
+  pinMode(TRIG, OUTPUT);
+  pinMode(ECHO, INPUT);
+  pinMode(BUZZER, OUTPUT);
+  Serial.begin(9600);
+}
+
+// ===== SENSOR DISTÂNCIA =====
+int medirDistancia() {
+  digitalWrite(TRIG, LOW);
+  delayMicroseconds(2);
+
+  digitalWrite(TRIG, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(TRIG, LOW);
+
+  long duracao = pulseIn(ECHO, HIGH);
+  return duracao * 0.034 / 2;
+}
+
+// ===== LOOP =====
+void loop() {
+  unsigned long agora = millis();
+
+  distancia = medirDistancia();
+  luz = analogRead(LDR);
+
+  Serial.print("Dist: "); Serial.print(distancia);
+  Serial.print(" | Luz: "); Serial.println(luz);
+
+  // Só funciona no escuro
+  if (luz < 400) {
+
+    // Ajusta velocidade do beep
+    if (distancia < 10) {
+      intervaloBuzzer = 100;
+    } else if (distancia < 20) {
+      intervaloBuzzer = 300;
+    } else {
+      intervaloBuzzer = 600;
+    }
+
+    // Controle sem delay
+    if (agora - tempoAnterior >= intervaloBuzzer) {
+      tempoAnterior = agora;
+      tone(BUZZER, 1000, 100);
+    }
+
+  } else {
+    noTone(BUZZER);
+  }
+}
