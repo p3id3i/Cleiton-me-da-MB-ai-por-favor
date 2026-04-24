@@ -1,0 +1,121 @@
+PASSO 1 — Banco de Dados (MySQL)
+
+Crie o banco e uma tabela simples. Exemplo: cadastro de usuários.
+
+CREATE DATABASE cadastro_db;
+
+USE cadastro_db;
+
+CREATE TABLE usuario (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100),
+    email VARCHAR(100)
+);
+
+PASSO 2 — Criar o Projeto no NetBeans
+Novo Projeto → Java Application
+Nome: CadastroUsuario
+NÃO precisa marcar “Create Main Class” (ou pode deixar)
+
+PASSO 3 — Factory (Conexão com banco)
+
+Essa classe é crítica. Se errar aqui, nada funciona.
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class ConnectionFactory {
+
+    private static final String URL = "jdbc:mysql://localhost:3306/cadastro_db";
+    private static final String USER = "root";
+    private static final String PASSWORD = "sua_senha";
+
+    public static Connection getConnection() {
+        try {
+            return DriverManager.getConnection(URL, USER, PASSWORD);
+        } catch (Exception e) {
+            throw new RuntimeException("Erro na conexão", e);
+        }
+    }
+}
+
+Dica:
+
+Se der erro: provavelmente falta o driver MySQL (mysql-connector)
+
+PASSO 4 — Modelo (Classe Usuario)
+
+public class Usuario {
+    
+    private int id;
+    private String nome;
+    private String email;
+
+    // getters e setters
+    public int getId() { return id; }
+    public void setId(int id) { this.id = id; }
+
+    public String getNome() { return nome; }
+    public void setNome(String nome) { this.nome = nome; }
+
+    public String getEmail() { return email; }
+    public void setEmail(String email) { this.email = email; }
+}
+
+🗄️ PASSO 5 — DAO (Acesso ao banco)
+
+Aqui acontece o CRUD.
+
+CREATE (Cadastrar)
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+public class UsuarioDAO {
+
+    public void cadastrar(Usuario u) {
+        String sql = "INSERT INTO usuario (nome, email) VALUES (?, ?)";
+
+        try (Connection conn = ConnectionFactory.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+            stmt.setString(1, u.getNome());
+            stmt.setString(2, u.getEmail());
+
+            stmt.execute();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+🖥️ PASSO 6 — GUI (Interface Swing)
+
+Você pode criar um JFrame no NetBeans (modo visual).
+
+Componentes:
+
+JTextField → nome
+JTextField → email
+JButton → cadastrar
+JButton → limpar
+JButton → sair
+
+⚡ PASSO 7 — Evento SAIR
+System.exit(0);
+
+🧹 PASSO 8 — Evento LIMPAR
+txtNome.setText("");
+txtEmail.setText("");
+
+💾 PASSO 9 — Evento CADASTRAR
+Usuario u = new Usuario();
+u.setNome(txtNome.getText());
+u.setEmail(txtEmail.getText());
+
+UsuarioDAO dao = new UsuarioDAO();
+dao.cadastrar(u);
+
+🔍 PASSO 10 — Consultar no MySQL
+SELECT * FROM usuario;
