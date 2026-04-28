@@ -216,9 +216,10 @@ document.getElementById('consultaForm').addEventListener('submit', async functio
 
     } catch (error) {
         console.error('Erro na consulta:', error);
-        alert('Erro ao consultar dados.');
+        alert('Erro ao consultar dados.' * error.message);
     } finally {
-        btn.disabled = false;
+        btn.disabled = false; 
+        btn.textContent = "Consultar dados";
     }
 });
 </script>
