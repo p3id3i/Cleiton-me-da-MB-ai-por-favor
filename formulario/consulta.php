@@ -26,7 +26,7 @@ if ($email === '') {
 try {
     $pdo->exec('USE `' . DB_NAME . '`');
 
-    $stmt = $pdo->prepare('SELECT * FROM `cadastros` WHERE email = ?');
+    $stmt = $pdo->prepare('SELECT email, tel FROM `cadastros` WHERE email = ?');
     $stmt->execute([$email]);
 
     $cadastros = $stmt->fetch(PDO::FETCH_ASSOC);
