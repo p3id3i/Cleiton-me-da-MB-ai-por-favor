@@ -1,0 +1,10 @@
+Logica de um sistema de login basico:
+
+Criamos um script com um formulario pegando os dados do login, normalmente login e senha.
+Esses dados digitados terao que ser submetidos a um banco de dados. 
+No banco a gente procura pelo login e a senha, e se encontrar, a gente cria uma sessao e redireciona o usuario para a tela principal.
+Na tela principal, a gente checa se existe uma sessao. Se existir a gente libera a pagina, caso contrario redireciona para a tela de login.
+
+
+
+
