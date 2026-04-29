@@ -1,0 +1,393 @@
+	<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Sistema Integrado RH - Relatório de Ocorrencias</title>
+</head>
+<body>
+<style>
+table.bordasimples {border-collapse: collapse;}
+table.bordasimples tr td {border:1px solid #000000;}
+
+#declaracao {
+	width:100%;
+	height:50px;
+	margin:0 0 10px;
+	clear:both;
+	text-align: center; 
+	line-height:90%;
+}
+
+#header {
+	width:95%;
+	height:540px;
+	margin:0 0 10px;
+	clear:both;
+	text-align: justify; 
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size:10px;
+
+
+}
+
+#assinatura {
+	margin:0 0 10px;
+	clear:both;
+	text-align: left; 
+	line-height:90%;
+	text-indent: 2cm;
+}
+
+#footer {
+  position:relative;
+    bottom: 0;
+	text-align:right;
+	width:95%;
+    
+}
+
+#criacao {
+	text-align: center; 
+}
+
+p {
+		line-height:50%;
+	}
+
+</style>
+<div id='criacao' style="text-align: right;"><img src="http://sigurh.cps.sp.gov.br/images/timbre.png?1681908671" width='350' height='55'/>
+</div>
+<div id='header'>
+  
+  
+<style>
+  body {
+    font-size: 16px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  }
+
+  #quadradinho {
+    width: 10px;
+    min-width: 10px;
+    height: 10px;
+    min-height: 10px;
+    border: #000 1px solid;
+    margin-right: 3px;
+    margin-top: 3px;
+    float: left;
+    text-align: center;
+    padding-bottom: 2px;
+  }
+</style>
+
+<div id="cabecalhoAtrib" style="text-align:center; width:100%;">
+  <b>Escola Técnica Estadual Uirapuru - OP 230 - São Paulo<br /><b>TERMO DE ATRIBUIÇÃO DE AULAS DE 22/12/2022</b>  </b>
+</div>
+<div id="DadosProfessor" style="text-align:left; width:100%;">
+    Nome: <b>JESSE GONCALVES FONSECA</b> RG: <strong>29745044</strong>
+
+    <br />
+
+  Categoria: <b>CLT</b> Contrato: <b>Por tempo Indeterminado</b><br />
+
+  Carga horária semanal de aulas atribuídas válida a partir do início das atividades previstas em calendário escolar para o semestre/ano subsequente <strong>01/02/2023</strong>: Total de <b>33,00</b> H/A Semanais.
+</div>
+<br />
+</b>
+<div style="width:100%; text-align:center;font-weight:bold; background:#DDD; border:#BBB 1px solid; min-height:20px; padding:3px; border-radius:2px;">
+  Observação: aulas em substituição não compõem a carga horária do docente
+</div>
+<br />
+
+<table width="100%" border="0" cellspacing="2" cellpadding="2" class="bordasimples">
+  <tr>
+    <td rowspan="2" bgcolor="#DDDDDD" scope="col">Componente Curricular</td>
+    <td rowspan="2" align="center" bgcolor="#DDDDDD" scope="col">Classe</td>
+    <td rowspan="2" align="center" bgcolor="#DDDDDD" scope="col">Série</td>
+    <td rowspan="2" bgcolor="#DDDDDD" scope="col">Período</td>
+    <td rowspan="2" bgcolor="#DDDDDD" scope="col">Habilitação</td>
+    <td colspan="3" align="center" bgcolor="#DDDDDD" scope="col">Carga Horária</td>
+  </tr>
+  <tr>
+    <td align="center" bgcolor="#DDDDDD" scope="col" style="border-right:0px #DDDDDD hidden;" >
+          </td>
+
+    <td align="center" bgcolor="#DDDDDD" scope="col">Livre</td>
+    <td align="center" bgcolor="#DDDDDD" scope="col">Subst</td>
+  </tr>
+        <tr>
+        <td scope="row">
+          Banco de Dados I          <span style="font-size:7px;">
+                      </span>
+        </td>
+        <td align="center">1º ETIM DS</td>
+        <td align="center">1ª</td>
+        <td>Integral</td>
+        <td>Desenvolvimento de Sistemas  Integrado ao Ensino Médio (MTec - Programa Novotec Integrado) - MTec-PI</td>
+        <td align="center" style="border-right:0px #DDDDDD hidden;" >
+                  </td>
+        <td align="center">
+          2,00        </td>
+        <td align="center">
+                  </td>
+      </tr>
+
+          <tr>
+        <td scope="row">
+          Banco de Dados II          <span style="font-size:7px;">
+                      </span>
+        </td>
+        <td align="center">2º Tec DS</td>
+        <td align="center">2ª</td>
+        <td>Noite</td>
+        <td>Desenvolvimento de Sistemas</td>
+        <td align="center" style="border-right:0px #DDDDDD hidden;" >
+                  </td>
+        <td align="center">
+          2,50        </td>
+        <td align="center">
+                  </td>
+      </tr>
+
+          <tr>
+        <td scope="row">
+          Design Digital          <span style="font-size:7px;">
+                      </span>
+        </td>
+        <td align="center">1º ETIM DS</td>
+        <td align="center">1ª</td>
+        <td>Integral</td>
+        <td>Desenvolvimento de Sistemas  Integrado ao Ensino Médio (MTec - Programa Novotec Integrado) - MTec-PI</td>
+        <td align="center" style="border-right:0px #DDDDDD hidden;" >
+                  </td>
+        <td align="center">
+          2,00        </td>
+        <td align="center">
+                  </td>
+      </tr>
+
+          <tr>
+        <td scope="row">
+          Design Digital          <span style="font-size:7px;">
+                      </span>
+        </td>
+        <td align="center">1º Tec DS</td>
+        <td align="center">1ª</td>
+        <td>Noite</td>
+        <td>Desenvolvimento de Sistemas</td>
+        <td align="center" style="border-right:0px #DDDDDD hidden;" >
+                  </td>
+        <td align="center">
+          2,50        </td>
+        <td align="center">
+                  </td>
+      </tr>
+
+          <tr>
+        <td scope="row">
+          Fundamentos da Informática          <span style="font-size:7px;">
+                      </span>
+        </td>
+        <td align="center">1º Tec DS</td>
+        <td align="center">1ª</td>
+        <td>Noite</td>
+        <td>Desenvolvimento de Sistemas</td>
+        <td align="center" style="border-right:0px #DDDDDD hidden;" >
+                  </td>
+        <td align="center">
+          2,50        </td>
+        <td align="center">
+                  </td>
+      </tr>
+
+          <tr>
+        <td scope="row">
+          Operação de Software Aplicativo          <span style="font-size:7px;">
+                      </span>
+        </td>
+        <td align="center">1º Tec DS</td>
+        <td align="center">1ª</td>
+        <td>Noite</td>
+        <td>Desenvolvimento de Sistemas</td>
+        <td align="center" style="border-right:0px #DDDDDD hidden;" >
+                  </td>
+        <td align="center">
+          2,50        </td>
+        <td align="center">
+                  </td>
+      </tr>
+
+          <tr>
+        <td scope="row">
+          Programação e Algoritmos          <span style="font-size:7px;">
+                      </span>
+        </td>
+        <td align="center">1º Tec DS</td>
+        <td align="center">1ª</td>
+        <td>Noite</td>
+        <td>Desenvolvimento de Sistemas</td>
+        <td align="center" style="border-right:0px #DDDDDD hidden;" >
+                  </td>
+        <td align="center">
+          5,00        </td>
+        <td align="center">
+                  </td>
+      </tr>
+
+          <tr>
+        <td scope="row">
+          Programação Web II          <span style="font-size:7px;">
+                      </span>
+        </td>
+        <td align="center">2º ETIM DS</td>
+        <td align="center">2ª</td>
+        <td>Integral</td>
+        <td>Desenvolvimento de Sistemas  Integrado ao Ensino Médio (MTec - Programa Novotec Integrado) - MTec-PI</td>
+        <td align="center" style="border-right:0px #DDDDDD hidden;" >
+                  </td>
+        <td align="center">
+          2,00        </td>
+        <td align="center">
+                  </td>
+      </tr>
+
+          <tr>
+        <td scope="row">
+          Programação Web III          <span style="font-size:7px;">
+                      </span>
+        </td>
+        <td align="center">3º ETIM DS</td>
+        <td align="center">3ª</td>
+        <td>Integral</td>
+        <td>Desenvolvimento de Sistemas  Integrado ao Ensino Médio (ETIM)</td>
+        <td align="center" style="border-right:0px #DDDDDD hidden;" >
+                  </td>
+        <td align="center">
+          2,00        </td>
+        <td align="center">
+                  </td>
+      </tr>
+
+          <tr>
+        <td scope="row">
+          Programação Web III          <span style="font-size:7px;">
+                      </span>
+        </td>
+        <td align="center">3º Tec DS</td>
+        <td align="center">3ª</td>
+        <td>Noite</td>
+        <td>Desenvolvimento de Sistemas</td>
+        <td align="center" style="border-right:0px #DDDDDD hidden;" >
+                  </td>
+        <td align="center">
+          5,00        </td>
+        <td align="center">
+                  </td>
+      </tr>
+
+          <tr>
+        <td scope="row">
+          Qualidade e Teste de Software          <span style="font-size:7px;">
+                      </span>
+        </td>
+        <td align="center">3º ETIM DS</td>
+        <td align="center">3ª</td>
+        <td>Integral</td>
+        <td>Desenvolvimento de Sistemas  Integrado ao Ensino Médio (ETIM)</td>
+        <td align="center" style="border-right:0px #DDDDDD hidden;" >
+                  </td>
+        <td align="center">
+          2,00        </td>
+        <td align="center">
+                  </td>
+      </tr>
+
+          <tr>
+        <td scope="row">
+          Técnicas de Programação e Algoritmos          <span style="font-size:7px;">
+                      </span>
+        </td>
+        <td align="center">1º ETIM DS</td>
+        <td align="center">1ª</td>
+        <td>Integral</td>
+        <td>Desenvolvimento de Sistemas  Integrado ao Ensino Médio (MTec - Programa Novotec Integrado) - MTec-PI</td>
+        <td align="center" style="border-right:0px #DDDDDD hidden;" >
+                  </td>
+        <td align="center">
+          3,00        </td>
+        <td align="center">
+                  </td>
+      </tr>
+
+    
+        <tr>
+      <td colspan="7" align="right" scope="row">Total da carga horária semanal para fins de pagamento</td>
+      <td align="center">4,00</td>
+    </tr>
+    <tr>
+      <td colspan="7" align="right" scope="row">Total da carga horária semanal para fins de manutenção/ampliação de carga horária</td>
+      <td align="center">33,00</td>
+    </tr>
+</table>
+<p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" style="font-size:9px; text-align:left;">
+  <tr>
+    <td>Informações Complementares</td>
+    <td>Motivo da redução involuntária, quando for o caso:</td>
+  </tr>
+  <tr>
+    <td width="40%" valign="top">
+      <div style='width:99%;padding:2px;'><div id='quadradinho'><b>X</b></div> Manutenção de carga horária semanal</div><div style='width:99%;padding:2px;'><div id='quadradinho'></div> Recomposição da carga horária semanal </div><div style='width:99%;padding:2px;'><div id='quadradinho'></div> Ampliação de carga horária semanal</div><div style='width:99%;padding:2px;'><div id='quadradinho'></div> Redução voluntária de carga horária semanal</div><div style='width:99%;padding:2px;'><div id='quadradinho'></div> Redução involuntária de carga horária semanal</div><div style='width:99%;padding:2px;'><div id='quadradinho'></div> Atribuição de admissão</div><div style='width:99%;padding:2px;'><div id='quadradinho'></div> Alteração de Contrato</div>    </td>
+    <td width="60%" valign="top">
+      <div style='width:99%;padding:2px;'><div id='quadradinho'></div> Extinção da Habilitação</div><div style='width:99%;padding:2px;'><div id='quadradinho'></div> Extinção de Componente(s) Curricular(es)</div><div style='width:99%;padding:2px;'><div id='quadradinho'></div> Redução de classe(s) e turma(s)</div><div style='width:99%;padding:2px;'><div id='quadradinho'></div> Redução de carga horária de componente(s) curricular(es) na Organização Curricular</div><div style='width:99%;padding:2px;'><div id='quadradinho'></div> Redução de aulas oferecidas em substituição</div><div style='width:99%;padding:2px;'><div id='quadradinho'></div> Aulas oferecidas em horário em que o docente não assinalou disponibilidade</div><div style='width:99%;padding:2px;'><div id='quadradinho'></div> Outros</div>    </td>
+  </tr>
+</table>
+
+<p style="line-height:102%;text-indent:10px;">
+  <strong>Observações:</strong>
+</p>
+
+<p style="line-height:102%;text-indent:10px;">
+  Se afasta para assumir a Coordenacao Pedagógica na Etec de Mauá.</p>
+
+
+
+<div style="width:98%; text-align:center;">
+  <br />
+  <b>
+     São Paulo, 22/12/2022  </b>
+  <br />
+</div>
+
+
+<table width="100%" border="0" cellspacing="2" cellpadding="2">
+  <tr>
+    <td width="50%">
+      <fieldset style="width:80%;border:#AAA 1px solid; border-radius:3px;min-height:50px;float:right;text-align:center;">
+        <legend style="width:170px; background:#DDD;border:#DDD 1px solid; border-radius:3px;height:12px;">De Acordo ____/___/______</legend>
+        <br />
+        _________________________________________<br />
+
+        JESSE GONCALVES FONSECA      </fieldset>
+    </td>
+    <td width="50%">
+
+      <fieldset style="width:80%;border:#AAA 1px solid; border-radius:3px;min-height:50px; float:left;text-align:center;">
+        <legend style="width:170px; background:#DDD;border:#DDD 1px solid; border-radius:3px;height:12px;"> Direção da Unidade </legend>
+        <br />
+        _________________________________________<br />
+        SUELI RIBEIRO DA COSTA MARTINS DOS SANTOS, RG 175462021      </fieldset>
+
+    </td>
+  </tr>
+</table>
+
+
+
+</p>
+<div id='footer' align="left">
+<hr />Gerado por <b>JESSE GONCALVES FONSECA</b> às 08:39:24 em 03/07/2023<br>Sistema Integrado de Gestão - URH - Ceeteps
+</div>
+</div>
+</body>
+</html>
